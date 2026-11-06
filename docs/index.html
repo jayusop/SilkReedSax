@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SilkReed Sax — Saxophone VST</title>
+<meta name="description" content="소프라노·알토·테너 색소폰만을 위해 만든 무료 macOS 색소폰 가상악기 (VST3 / AU / Standalone). A free macOS virtual instrument built for saxophone and nothing else.">
+<meta property="og:title" content="SilkReed Sax — Saxophone VST">
+<meta property="og:description" content="Free macOS VST3 / AU / Standalone instrument built only for saxophone — soprano, alto and tenor, with breath, reed, vibrato and legato modelled in real time.">
+<meta property="og:image" content="assets/icon.png">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="assets/icon.png" alt=""><span>SilkReed <em>Sax</em></span></a>
+    <nav class="links">
+      <a class="hl" href="#saxophone"><span lang="ko">색소폰 전용</span><span lang="en">Saxophone only</span></a>
+      <a href="#features"><span lang="ko">기능</span><span lang="en">Features</span></a>
+      <a href="#install"><span lang="ko">설치</span><span lang="en">Install</span></a>
+      <a href="#usage"><span lang="ko">사용법</span><span lang="en">Usage</span></a>
+      <a href="#build"><span lang="ko">빌드</span><span lang="en">Build</span></a>
+      <a href="#faq">FAQ</a>
+      <a data-link="source" href="#">GitHub</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-set-lang="ko">KO</button><button data-set-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div>
+    <div class="eyebrow">Saxophone VST · macOS</div>
+    <h1>
+      <span lang="ko"><span class="kg">색소폰</span>만을 위해<br>만든 <span class="soft">가상악기 VST</span></span>
+      <span lang="en">A VST made for<br><span class="kg">saxophone</span>,<br><span class="soft">and nothing else</span></span>
+    </h1>
+    <p class="lead">
+      <span lang="ko">SilkReed Sax는 여러 악기를 조금씩 흉내 내는 범용 음원이 아니라, 소프라노·알토·테너 색소폰 하나만을 위해 설계한 무료 가상악기입니다. 숨결과 리드의 떨림, 비브라토, 레가토, 스쿱과 그로울까지 색소폰 연주자가 실제로 쓰는 표현을 샘플 없이 실시간으로 모델링합니다. 열자마자 기본 프리셋 <b>Soprano - Smooth Jazz Lead</b>로 바로 연주할 수 있습니다.</span>
+      <span lang="en">SilkReed Sax isn't a general-purpose sound module that imitates a bit of everything — it's a free virtual instrument designed for one thing: soprano, alto and tenor saxophone. Breath, reed buzz, vibrato, legato, scoops and growl — the expressions sax players actually use — are modelled in real time, with no samples. Open it and the default preset, <b>Soprano - Smooth Jazz Lead</b>, is ready to play.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" data-link="download" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+        <span lang="ko">macOS용 다운로드</span><span lang="en">Download for macOS</span>
+      </a>
+      <a class="btn" href="#saxophone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span lang="ko">색소폰 전용 설계 보기</span><span lang="en">Why saxophone-only</span>
+      </a>
+    </div>
+    <div class="ver" id="ver"></div>
+    <div class="chips" style="margin-top:14px">
+      <span class="chip gold"><span lang="ko">색소폰 전용</span><span lang="en">Saxophone only</span></span>
+      <span class="chip"><b>VST3</b> · <b>AU</b> · <b>Standalone</b></span>
+      <span class="chip">macOS 12+</span>
+      <span class="chip">Universal · Apple Silicon / Intel</span>
+      <span class="chip"><span lang="ko">무료</span><span lang="en">Free</span></span>
+    </div>
+  </div>
+
+  <figure class="shot">
+    <img src="assets/screenshot.png" width="1170" height="700" alt="SilkReed Sax plug-in window">
+    <figcaption><span lang="ko">SilkReed Sax 플러그인 화면 — 기본 프리셋 Soprano - Smooth Jazz Lead</span><span lang="en">The SilkReed Sax window — default preset Soprano - Smooth Jazz Lead</span></figcaption>
+  </figure>
+</div>
+
+<!-- ================= SAXOPHONE SPOTLIGHT ================= -->
+<section id="saxophone" class="first">
+  <div class="spot">
+    <div class="eyebrow" style="margin-bottom:10px">Soprano · Alto · Tenor</div>
+    <h2><span lang="ko"><span class="kg">색소폰</span> 연주 방식에 맞춰 설계했습니다</span><span lang="en">Designed around how a <span class="kg">saxophone</span> is played</span></h2>
+    <p><span lang="ko">범용 관악기 음원을 색소폰처럼 다듬어 쓰는 대신, 처음부터 색소폰이 소리를 내는 방식과 연주자가 표현하는 방식을 기준으로 엔진과 기본값을 잡았습니다. 색소폰다운 소리를 만드는 네 가지 요소가 SilkReed Sax에서는 이렇게 구현되어 있습니다. 아래 값은 기본 프리셋 기준입니다.</span><span lang="en">Rather than shaping a general wind patch into a sax, the engine and its defaults start from how a saxophone makes sound and how players shape it. Here are four things that make a sax sound like a sax, and how SilkReed Sax handles each. Values shown are from the default preset.</span></p>
+
+    <div class="traits">
+      <div class="trait">
+        <h3><span lang="ko">숨결과 리드가 살아 있는 톤</span><span lang="en">A tone with breath and reed in it</span></h3>
+        <p><span lang="ko">악기별 보어·벨 공명 위에 피치에 맞춰 흔들리는 숨결 노이즈를 얹고, 세게 불수록 리드가 거칠어지며 소리가 밝아집니다. 소프라노·알토·테너가 각각 다른 공명 프로파일을 씁니다.</span><span lang="en">Pitch-synchronous breath noise sits over each horn's bore and bell resonances, and the reed roughens and brightens as you blow harder. Soprano, alto and tenor each have their own resonance profile.</span></p>
+        <div class="params"><span>Brightness 64%</span><span>Reed Edge 30%</span><span>Air 42%</span><span>Body 85%</span></div>
+      </div>
+      <div class="trait">
+        <h3><span lang="ko">입술로 만드는 비브라토</span><span lang="en">Lip vibrato</span></h3>
+        <p><span lang="ko">음이 시작되면 곧게 뻗다가, 약 0.26초 뒤부터 0.7초에 걸쳐 비브라토가 서서히 깊어집니다. 피치뿐 아니라 음량·음색도 함께 흔들리는 립 비브라토라 긴 음이 살아 있습니다.</span><span lang="en">Notes start straight; after about 0.26 s the vibrato fades in over 0.7 s. It's a lip vibrato that moves level and tone as well as pitch, so long notes stay alive.</span></p>
+        <div class="params"><span>Rate 5.7 Hz</span><span>Depth 30 ct</span><span>Delay 260 ms</span><span>Fade In 700 ms</span><span>Amp/Tone 45%</span></div>
+      </div>
+      <div class="trait">
+        <h3><span lang="ko">비단처럼 이어지는 레가토와 스쿱</span><span lang="en">Silky legato and scoops</span></h3>
+        <p><span lang="ko">겹쳐 누른 음은 끊기지 않고 미끄러지듯 이어지고, 텅잉한 음은 아래에서 살짝 올려 잡습니다. 혀 끝의 어택은 부드럽게 눌러 두었습니다.</span><span lang="en">Overlapping notes glide into each other without a break; tongued notes scoop up from just below. The tongued attack is kept soft.</span></p>
+        <div class="params"><span>Voice Mode: Legato</span><span>Glide 55 ms</span><span>Scoop 35% / 110 ms</span><span>Tongue 30%</span></div>
+      </div>
+      <div class="trait">
+        <h3><span lang="ko">끝없이 부풀어 오르는 롱톤과 공간감</span><span lang="en">Swelling long tones in a lush space</span></h3>
+        <p><span lang="ko">길게 끄는 음은 1.4초에 걸쳐 저절로 크레센도되고, 부드러운 보컬형 컴프레서·핑퐁 딜레이·넓은 리버브가 발라드 무대 같은 울림을 줍니다.</span><span lang="en">Held notes crescendo on their own over 1.4 s, while a smooth vocal-style compressor, ping-pong delay and a wide reverb give a ballad-stage glow.</span></p>
+        <div class="params"><span>Auto Swell 45% / 1.4 s</span><span>Comp 40%</span><span>Delay 14% · 390 ms</span><span>Reverb 30% · Size 70%</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px;position:relative;z-index:1"><span lang="ko">색소폰답게 연주하는 요령</span><span lang="en">Tips for playing it like a sax</span></h3>
+    <ul class="tips">
+      <li><span lang="ko"><b>음을 살짝 겹쳐 누르세요.</b> 앞 음을 떼기 전에 다음 음을 누르면 레가토 슬러가 걸려 한 호흡으로 이어집니다. 끊고 싶을 때만 손을 떼세요.</span><span lang="en"><b>Overlap your notes.</b> Press the next key before releasing the last and you get a legato slur in one breath. Lift only when you want a break.</span></li>
+      <li><span lang="ko"><b>긴 음은 충분히 끄세요.</b> 비브라토가 늦게 들어오고 Auto Swell이 서서히 부풀기 때문에, 프레이즈 끝의 롱톤에서 색소폰다운 표현이 가장 잘 드러납니다.</span><span lang="en"><b>Let long notes ring.</b> The delayed vibrato and Auto Swell need time — a sax sounds most like itself on the long tone at the end of a phrase.</span></li>
+      <li><span lang="ko"><b>클라이맥스에서는 모드 휠을 올리세요.</b> CC1이 비브라토를 최대 40센트까지 더 깊게 만들어 감정을 끌어올립니다.</span><span lang="en"><b>Push the mod wheel at the climax.</b> CC1 adds up to 40 cents of extra vibrato for the emotional peak.</span></li>
+      <li><span lang="ko"><b>악기 음역 안에서 연주하세요.</b> 소프라노·알토·테너 모두 실제 악기 음역 안에서 가장 자연스럽습니다. Character 패널의 <code>Range</code>를 <i>Fold to Range</i>로 두면 벗어난 음을 옥타브로 접어 줍니다.</span><span lang="en"><b>Stay in the horn's range.</b> Soprano, alto and tenor each sound most natural within the real instrument's range. Set <code>Range</code> in the Character panel to <i>Fold to Range</i> to fold stray notes back by octaves.</span></li>
+      <li><span lang="ko"><b>장르에 맞는 악기와 프리셋으로 시작하세요.</b> 스무드 재즈는 <b>Soprano - Smooth Jazz Lead</b>, R&amp;B는 <b>Alto - Smooth R&amp;B Lead</b>, 록은 <b>Tenor - Gritty Rock</b>이 출발점입니다. EWI가 있다면 각 악기의 <b>EWI Breath Control</b> 프리셋이 숨으로 음량과 음색을 바로 움직입니다.</span><span lang="en"><b>Start from the horn and preset that fit the genre.</b> <b>Soprano - Smooth Jazz Lead</b> for smooth jazz, <b>Alto - Smooth R&amp;B Lead</b> for R&amp;B, <b>Tenor - Gritty Rock</b> for rock. With an EWI, each horn's <b>EWI Breath Control</b> preset puts level and tone straight under your breath.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features">
+  <h2><span lang="ko">주요 기능</span><span lang="en">Features</span></h2>
+  <p class="sub"><span lang="ko">샘플을 재생하지 않고 연주 표현 자체를 실시간으로 모델링합니다.</span><span lang="en">It doesn't play back samples — it models the playing itself, in real time.</span></p>
+  <div class="grid">
+    <div class="card"><span class="ico">3 HORNS</span>
+      <h3><span lang="ko">소프라노 · 알토 · 테너</span><span lang="en">Soprano · Alto · Tenor</span></h3>
+      <p><span lang="ko">악기마다 다른 보어·벨 공명과 톤홀 프로파일. 스무드 재즈 소프라노부터 R&amp;B 알토, 록 테너까지 색소폰 세 가지를 한 플러그인에 담았습니다.</span><span lang="en">Each horn has its own bore, bell and tone-hole profile — smooth jazz soprano, R&amp;B alto and rock tenor in one plug-in.</span></p></div>
+    <div class="card"><span class="ico">HARMONIC ENGINE</span>
+      <h3><span lang="ko">세게 불수록 밝아지는 소리</span><span lang="en">Brighter as you push</span></h3>
+      <p><span lang="ko">위상 고정형 배음 오실레이터 64개. 브레스 세기에 따라 스펙트럼이 바뀌어 실제 색소폰처럼 다이내믹에 따라 음색이 달라집니다.</span><span lang="en">64 phase-locked harmonic oscillators whose spectrum follows breath strength, so timbre changes with dynamics like a real sax.</span></p></div>
+    <div class="card"><span class="ico">BREATH</span>
+      <h3><span lang="ko">숨결과 리드</span><span lang="en">Breath and reed</span></h3>
+      <p><span lang="ko">피치 동기 숨결 노이즈와 에어 히스, 다이내믹에 반응하는 리드 새츄레이션, 어둡고 부드러운 서브톤.</span><span lang="en">Pitch-synchronous breath noise and air hiss, dynamic reed saturation, and a dark, soft subtone.</span></p></div>
+    <div class="card"><span class="ico">EXPRESSION</span>
+      <h3><span lang="ko">연주 표현</span><span lang="en">Expression</span></h3>
+      <p><span lang="ko">딜레이·페이드인 비브라토, 스쿱, 폴, 텅잉 트랜지언트, 레가토 슬러, 그로울, 휴머나이즈.</span><span lang="en">Delayed, fading-in vibrato, scoops, falls, tongued transients, legato slurs, growl and humanize.</span></p></div>
+    <div class="card"><span class="ico">EWI READY</span>
+      <h3><span lang="ko">EWI · 브레스 컨트롤러</span><span lang="en">EWI and breath controllers</span></h3>
+      <p><span lang="ko">CC2 브레스, CC11 익스프레션, 애프터터치로 실시간 제어. 건반으로 쳐도 벨로시티와 Auto Swell로 자연스럽게 연주됩니다.</span><span lang="en">Drive it with CC2 breath, CC11 expression or aftertouch — or just a keyboard, where velocity and Auto Swell keep it natural.</span></p></div>
+    <div class="card"><span class="ico">STUDIO FX</span>
+      <h3><span lang="ko">믹스에 바로 쓰는 이펙트</span><span lang="en">Mix-ready effects</span></h3>
+      <p><span lang="ko">3밴드 EQ, RMS 컴프레서, 스테레오 초기 반사, 핑퐁 딜레이, 8라인 FDN 리버브, 안전 리미터.</span><span lang="en">3-band EQ, RMS compressor, stereo early reflections, ping-pong delay, 8-line FDN reverb and a safety limiter.</span></p></div>
+  </div>
+  <div class="formats"><span>VST3</span><span>AU</span><span>Standalone</span><span>arm64 + x86_64</span><span>CPU ≈ 0.7% mono</span></div>
+
+  <h3 style="margin-top:40px"><span lang="ko">팩토리 프리셋 14개</span><span lang="en">14 factory presets</span></h3>
+  <p style="color:var(--body);margin:0 0 14px"><span lang="ko">★ 표시가 기본 프리셋입니다.</span><span lang="en">★ marks the default preset.</span></p>
+  <div class="table-wrap"><table>
+    <tr><th><span lang="ko">악기</span><span lang="en">Horn</span></th><th><span lang="ko">프리셋</span><span lang="en">Presets</span></th></tr>
+    <tr class="star"><td>Soprano</td><td><b style="color:var(--gold-light)">Smooth Jazz Lead</b> · Silk Ballad · Bright Pop Lead · Intimate Dry · EWI Breath Control</td></tr>
+    <tr><td>Alto</td><td>Warm Ballad · Smooth R&amp;B Lead · Funk Edge · EWI Breath Control</td></tr>
+    <tr><td>Tenor</td><td>Breathy Ballad · Smooth Lead · Gritty Rock · EWI Breath Control</td></tr>
+    <tr><td>—</td><td>Init (Default)</td></tr>
+  </table></div>
+</section>
+
+<!-- ================= INSTALL ================= -->
+<section id="install">
+  <h2><span lang="ko">설치</span><span lang="en">Installation</span></h2>
+  <p class="sub"><span lang="ko">macOS 12 Monterey 이상이 필요합니다. 하나의 유니버설 바이너리로 Apple Silicon과 Intel Mac에서 모두 네이티브로 실행됩니다.</span><span lang="en">Requires macOS 12 Monterey or later. One universal binary runs natively on both Apple Silicon and Intel Macs.</span></p>
+  <ol class="steps">
+    <li>
+      <h3><span lang="ko">릴리스 다운로드</span><span lang="en">Download the release</span></h3>
+      <p><span lang="ko"><a data-link="releases" href="#">Releases 페이지</a>에서 최신 버전의 <code>.zip</code>을 받아 압축을 풉니다.</span><span lang="en">Get the latest <code>.zip</code> from the <a data-link="releases" href="#">Releases page</a> and unzip it.</span></p>
+    </li>
+    <li>
+      <h3><span lang="ko">플러그인 복사</span><span lang="en">Copy the plug-ins</span></h3>
+      <p><span lang="ko">쓰는 DAW에 맞는 파일만 복사해도 됩니다. Finder에서 <kbd>⌘⇧G</kbd>로 폴더를 열 수 있습니다.</span><span lang="en">Copy only the formats your DAW uses. In Finder, press <kbd>⌘⇧G</kbd> to open a folder by path.</span></p>
+      <div class="table-wrap" style="margin-top:12px"><table>
+        <tr><th><span lang="ko">파일</span><span lang="en">File</span></th><th><span lang="ko">복사할 위치</span><span lang="en">Copy to</span></th></tr>
+        <tr><td><code>SilkReed Sax.vst3</code></td><td><code>~/Library/Audio/Plug-Ins/VST3</code></td></tr>
+        <tr><td><code>SilkReed Sax.component</code></td><td><code>~/Library/Audio/Plug-Ins/Components</code> <span lang="ko">(Logic, GarageBand)</span><span lang="en">(Logic, GarageBand)</span></td></tr>
+        <tr><td><code>SilkReed Sax.app</code></td><td><code>/Applications</code> <span lang="ko">(DAW 없이 단독 실행)</span><span lang="en">(runs without a DAW)</span></td></tr>
+      </table></div>
+    </li>
+    <li>
+      <h3><span lang="ko">macOS 보안 경고 해제</span><span lang="en">Clear the macOS quarantine flag</span></h3>
+      <p><span lang="ko">공증(notarize)되지 않은 빌드라면 macOS가 "손상되었거나 확인할 수 없는 개발자" 경고를 띄웁니다. 터미널에서 아래 명령으로 해제하세요.</span><span lang="en">If the build isn't notarised, macOS reports it as damaged or from an unidentified developer. Clear the flag in Terminal:</span></p>
+<pre><code>xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
+xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
+xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"</code></pre>
+    </li>
+    <li>
+      <h3><span lang="ko">DAW에서 다시 스캔</span><span lang="en">Rescan in your DAW</span></h3>
+      <p><span lang="ko">DAW를 재시작하거나 플러그인을 다시 스캔한 뒤 악기 트랙에 <b>SilkReed Sax</b>를 올립니다. Logic Pro에서는 <i>Instrument › AU Instruments › SilkReed Audio › SilkReed Sax</i>에 있습니다. AU가 안 보이면 아래 명령으로 검증해 보세요.</span><span lang="en">Restart or rescan, then insert <b>SilkReed Sax</b> on an instrument track. In Logic Pro it's under <i>Instrument › AU Instruments › SilkReed Audio › SilkReed Sax</i>. If the AU doesn't show up, validate it:</span></p>
+<pre><code>auval -v aumu SRsx Slkr</code></pre>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= USAGE ================= -->
+<section id="usage">
+  <h2><span lang="ko">사용법</span><span lang="en">Usage</span></h2>
+  <p class="sub"><span lang="ko">위쪽 헤더에서 악기와 프리셋을 고르고, 아래 여섯 패널로 소리를 다듬습니다. 노브를 더블클릭하면 기본값으로, 창 모서리를 끌면 60–200% 크기로 바뀝니다.</span><span lang="en">Pick a horn and preset in the header, then shape the sound with the six panels below. Double-click a knob to reset it; drag the window corner to resize from 60 to 200%.</span></p>
+  <div class="table-wrap"><table>
+    <tr><th><span lang="ko">영역</span><span lang="en">Area</span></th><th><span lang="ko">설명</span><span lang="en">What it does</span></th></tr>
+    <tr><td><code>SOPRANO · ALTO · TENOR</code></td><td><span lang="ko">악기 선택. 그 악기에서 마지막으로 쓴 프리셋으로 돌아갑니다</span><span lang="en">Choose the horn; returns to the last preset you used on it</span></td></tr>
+    <tr><td><code>PRESET ◀ ▶ · SAVE · LOAD</code></td><td><span lang="ko">팩토리·사용자 프리셋 선택. SAVE는 <code>~/Music/SilkReed Sax/Presets/*.srpreset</code>에 저장합니다</span><span lang="en">Factory and user presets. SAVE writes to <code>~/Music/SilkReed Sax/Presets/*.srpreset</code></span></td></tr>
+    <tr><td><code>ABOUT</code></td><td><span lang="ko">저작권, 라이선스, 제3자 고지 보기</span><span lang="en">Copyright, licences and third-party notices</span></td></tr>
+    <tr><td><code>BREATH · MASTER</code></td><td><span lang="ko">브레스 입력 미터, 출력 레벨과 피크 미터</span><span lang="en">Breath input meter, output level and peak meter</span></td></tr>
+    <tr><td><code>Tone</code></td><td>Brightness · Reed Edge · Warmth · Body · Formant · Air · Air Tone · Subtone</td></tr>
+    <tr><td><code>Breath &amp; Dynamics</code></td><td>Source · Sensitivity · Curve · Dyn Timbre · Attack · Release · Auto Swell · Swell Time</td></tr>
+    <tr><td><code>Vibrato</code></td><td>Rate · Depth · Delay · Fade In · Mod Wheel · Amp/Tone · Random</td></tr>
+    <tr><td><code>Articulation</code></td><td>Voice Mode (Legato / Retrigger / Poly) · Glide · Glide Mode · Bend Range · Scoop · Scoop Time · Tongue · Fall</td></tr>
+    <tr><td><code>Character</code></td><td>Growl · Growl Rate · Humanize · Transpose · Fine Tune · Range (Free / Fold to Range)</td></tr>
+    <tr><td><code>Studio Effects</code></td><td>Low · Mid · Mid Freq · High · Compressor · Width · Delay · Delay Time · Feedback · Reverb · Size · Damping</td></tr>
+  </table></div>
+
+  <h3 style="margin-top:36px"><span lang="ko">컨트롤러 (EWI / 브레스 컨트롤러)</span><span lang="en">Controllers (EWI / breath controllers)</span></h3>
+  <div class="table-wrap" style="margin-top:12px"><table>
+    <tr><th>MIDI</th><th><span lang="ko">기능</span><span lang="en">Function</span></th></tr>
+    <tr><td><code>CC2 Breath</code></td><td><span lang="ko">Source = <i>Breath CC2</i>일 때 음량과 음색을 실시간 제어 (EWI 프리셋 기본값)</span><span lang="en">With Source = <i>Breath CC2</i>, drives level and tone in real time (default in the EWI presets)</span></td></tr>
+    <tr><td><code>CC11 Expression</code></td><td><span lang="ko">Source = <i>Expr CC11</i> 또는 <i>Vel x CC11</i></span><span lang="en">Source = <i>Expr CC11</i> or <i>Vel x CC11</i></span></td></tr>
+    <tr><td><code>Aftertouch</code></td><td><span lang="ko">Source = <i>Aftertouch</i></span><span lang="en">Source = <i>Aftertouch</i></span></td></tr>
+    <tr><td><code>CC1 Mod Wheel</code></td><td><span lang="ko">비브라토 추가 (Mod Wheel 노브로 깊이 조절)</span><span lang="en">Adds vibrato (depth set by the Mod Wheel knob)</span></td></tr>
+    <tr><td><code>Pitch Bend</code></td><td><span lang="ko">Bend Range 1–12반음</span><span lang="en">Bend Range 1–12 semitones</span></td></tr>
+    <tr><td><code>CC64</code></td><td><span lang="ko">서스테인</span><span lang="en">Sustain</span></td></tr>
+  </table></div>
+  <div class="note"><span lang="ko"><b>Curve</b>와 <b>Sensitivity</b>로 브레스 반응을 자기 호흡에 맞추세요. 헤더의 BREATH 미터로 입력값을 바로 확인할 수 있습니다.</span><span lang="en">Match the breath response to your own blowing with <b>Curve</b> and <b>Sensitivity</b>; the header's BREATH meter shows the incoming value.</span></div>
+</section>
+
+<!-- ================= BUILD ================= -->
+<section id="build">
+  <h2><span lang="ko">소스에서 빌드</span><span lang="en">Build from source</span></h2>
+  <p class="sub"><span lang="ko">전체 소스 코드는 각 릴리스에 <code>SilkReed-Sax-&lt;버전&gt;-source.zip</code>으로 함께 올라갑니다. Xcode 커맨드라인 툴과 CMake 3.22 이상이 필요하며, JUCE 8.0.9가 없으면 <code>build.sh</code>가 내려받습니다. Apple Silicon 전용, Intel 전용, 유니버설 중에서 골라 빌드할 수 있습니다.</span><span lang="en">The complete source code is attached to every release as <code>SilkReed-Sax-&lt;version&gt;-source.zip</code>. You need the Xcode command-line tools and CMake 3.22+; <code>build.sh</code> fetches JUCE 8.0.9 if it's missing. Build for Apple Silicon only, Intel only or universal.</span></p>
+<pre><code><span class="c"># once</span>
+brew install cmake
+
+<span class="c"># unzip the source from the Releases page, then</span>
+cd SilkReed-Sax-source
+./build.sh                 <span class="c"># this Mac's CPU</span>
+./build.sh universal       <span class="c"># Apple Silicon + Intel in one   → build-universal/</span>
+./build.sh arm64           <span class="c"># Apple Silicon only             → build-arm64/</span>
+./build.sh x86_64          <span class="c"># Intel only                     → build-x86_64/</span>
+
+<span class="c"># or work in Xcode (CPU = build configuration, e.g. Release_Universal)</span>
+./xcode.sh</code></pre>
+  <p style="color:var(--body)"><span lang="ko">결과물은 <code>build-&lt;대상&gt;/SilkReedSax_artefacts/Release/{VST3,AU,Standalone}</code>에 생깁니다. 빌드가 끝나면 <code>Tools/check_arch.sh</code>가 바이너리의 CPU를 검사하고 <code>Tools/post_build.sh</code>가 모든 번들을 ad-hoc 서명합니다. 플러그인은 이 Mac에서 실행할 수 있을 때(이 Mac의 CPU용이거나 유니버설일 때)만 <code>~/Library/Audio/Plug-Ins</code>에 자동 설치되며, <code>-DSILKREED_INSTALL_PLUGINS=OFF</code>로 끌 수 있습니다. 배포용으로는 <code>universal</code>을 쓰세요.</span><span lang="en">Bundles land in <code>build-&lt;target&gt;/SilkReedSax_artefacts/Release/{VST3,AU,Standalone}</code>. After the build, <code>Tools/check_arch.sh</code> checks each binary's CPU and <code>Tools/post_build.sh</code> signs every bundle ad hoc. Plug-ins are installed to <code>~/Library/Audio/Plug-Ins</code> only when they can run on this Mac (its own CPU or universal); turn that off with <code>-DSILKREED_INSTALL_PLUGINS=OFF</code>. Use <code>universal</code> for distribution.</span></p>
+  <h3 style="margin-top:28px"><span lang="ko">개발자 도구</span><span lang="en">Developer tools</span></h3>
+<pre><code>T=build-universal/SilkReedTool_artefacts/Release/SilkReedTool   <span class="c"># or build-arm64 / build-x86_64</span>
+$T render out/      <span class="c"># demo phrase WAV for every preset + level stats</span>
+$T bench            <span class="c"># CPU benchmark</span>
+$T snapshot ui.png  <span class="c"># render the editor to an image</span>
+$T icon out/        <span class="c"># Icon.svg → PNG / iconset</span></code></pre>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <h2>FAQ</h2>
+  <p class="sub"></p>
+  <details><summary><span lang="ko">색소폰 말고 다른 악기 소리도 나나요?</span><span lang="en">Does it do other instruments too?</span></summary>
+    <div><span lang="ko">아니요. 소프라노·알토·테너 색소폰 세 가지만 담았습니다. 대신 엔진, 컨트롤, 프리셋이 모두 색소폰 연주 표현(브레스, 비브라토, 레가토, 스쿱, 그로울)에 맞춰져 있어 범용 음원보다 색소폰다운 소리를 내기 쉽습니다.</span><span lang="en">No — just soprano, alto and tenor saxophone. In exchange, the engine, controls and presets are all built around sax expression (breath, vibrato, legato, scoops, growl), so it gets to a convincing sax sound faster than a general-purpose module.</span></div></details>
+  <details><summary><span lang="ko">실제 색소폰 녹음(샘플)이 들어 있나요?</span><span lang="en">Does it contain recorded saxophone samples?</span></summary>
+    <div><span lang="ko">아니요. 모든 소리는 코드로 실시간 합성됩니다. 그래서 용량이 작고, 음 사이를 잇는 레가토와 브레스 변화가 샘플 경계 없이 매끄럽게 이어집니다. 그 대신 연주감은 프레이징에 크게 좌우되니 <a href="#saxophone">연주 요령</a>을 참고하세요.</span><span lang="en">No. Every sound is synthesised in real time by code, so it's small and legato and breath changes flow without sample seams. The flip side is that phrasing matters a lot — see the <a href="#saxophone">playing tips</a>.</span></div></details>
+  <details><summary><span lang="ko">"손상되었기 때문에 열 수 없습니다"라고 나와요.</span><span lang="en">macOS says the plug-in "is damaged and can't be opened".</span></summary>
+    <div><span lang="ko">다운로드한 파일에 붙은 격리(quarantine) 속성 때문입니다. <a href="#install">설치 3단계</a>의 <code>xattr</code> 명령을 실행한 뒤 DAW를 다시 시작하세요.</span><span lang="en">That's the quarantine flag on downloaded files. Run the <code>xattr</code> commands from <a href="#install">step 3</a> and restart your DAW.</span></div></details>
+  <details><summary><span lang="ko">DAW에서 플러그인이 보이지 않아요.</span><span lang="en">My DAW doesn't list the plug-in.</span></summary>
+    <div><span lang="ko">파일이 사용자 Library(<code>~/Library</code>) 아래 올바른 폴더에 있는지 확인하고 다시 스캔하세요. Logic·GarageBand는 AU(<code>.component</code>)만, Ableton Live·Cubase·Reaper·Bitwig 등은 VST3도 사용합니다.</span><span lang="en">Check the files are in the right folders under your user Library (<code>~/Library</code>) and rescan. Logic and GarageBand use AU (<code>.component</code>) only; Live, Cubase, Reaper, Bitwig and others also load VST3.</span></div></details>
+  <details><summary><span lang="ko">EWI가 없어도 되나요?</span><span lang="en">Do I need an EWI?</span></summary>
+    <div><span lang="ko">아니요. 기본 프리셋은 건반 벨로시티로 연주하도록 맞춰져 있고, Auto Swell이 긴 음을 저절로 부풀려 줍니다. EWI나 브레스 컨트롤러가 있다면 <i>EWI Breath Control</i> 프리셋을 쓰세요.</span><span lang="en">No. The default preset is set up for keyboard velocity, and Auto Swell blooms long notes for you. With an EWI or breath controller, use an <i>EWI Breath Control</i> preset.</span></div></details>
+  <details><summary><span lang="ko">상업적으로 써도 되나요?</span><span lang="en">Can I use it commercially?</span></summary>
+    <div><span lang="ko">이 플러그인으로 만든 음악에는 제한이 없습니다. 플러그인 자체를 수정·재배포할 때는 AGPLv3 조건(소스 공개 등)을 따라야 합니다.</span><span lang="en">Music you make with it is yours. Modifying or redistributing the plug-in itself must follow the AGPLv3 (including publishing source).</span></div></details>
+</section>
+
+<!-- ================= LICENCE ================= -->
+<section id="license" class="legal">
+  <h2><span lang="ko">라이선스</span><span lang="en">Licence</span></h2>
+  <p class="sub"><span lang="ko">무료로 쓰고, 무료로 나눌 수 있습니다. 대신 소스는 항상 공개됩니다.</span><span lang="en">Free to use and free to share — with the source always open.</span></p>
+  <div class="grid">
+    <div class="card"><span class="ico">LICENCE</span>
+      <h3>AGPL-3.0-or-later</h3>
+      <p><span lang="ko">SilkReed Sax는 GNU Affero GPL v3 이상으로 배포됩니다. 비용·계약 없이 받아서 쓰고, 고치고, 나눌 수 있습니다.</span><span lang="en">SilkReed Sax is under the GNU Affero GPL v3 or later. Get it, use it, change it and share it with no fee and no contract.</span></p></div>
+    <div class="card"><span class="ico">YOUR MUSIC</span>
+      <h3><span lang="ko">만든 음악은 여러분의 것</span><span lang="en">Your music is yours</span></h3>
+      <p><span lang="ko">플러그인으로 연주·렌더링한 오디오에는 라이선스 의무가 없습니다. 상업 음반·영상·방송에도 자유롭게 쓰세요.</span><span lang="en">Audio you play or render with it carries no licence obligations. Use it freely in commercial releases, video and broadcast.</span></p></div>
+    <div class="card"><span class="ico">SHARING</span>
+      <h3><span lang="ko">재배포·수정 조건</span><span lang="en">Redistributing or modifying</span></h3>
+      <p><span lang="ko">전체 소스는 각 릴리스에 함께 올라갑니다. 바이너리를 다시 배포하면 전체 소스와 라이선스 파일을 함께 제공해야 하고, 수정본은 AGPLv3를 유지하며 수정 사실을 밝혀야 합니다.</span><span lang="en">The full source ships with every release. Redistributing binaries means providing the full source and licence files; modified versions stay under the AGPLv3 and must say they were modified.</span></p></div>
+  </div>
+  <p style="margin-top:24px"><span lang="ko">JUCE 8.0.9(AGPLv3)와 Steinberg VST3 SDK 3.7.12(GPLv3)의 오픈소스 라이선스를 택해 무료로 공개합니다. 나머지 구성 요소는 모두 허용형 라이선스이며, 전체 고지문은 각 번들 안과 플러그인의 ABOUT 버튼에도 들어 있습니다.</span><span lang="en">Distributed free under the open-source options of JUCE 8.0.9 (AGPLv3) and the Steinberg VST3 SDK 3.7.12 (GPLv3). Every other component uses a permissive licence; the full notices are also inside every bundle and behind the plug-in's ABOUT button.</span></p>
+  <p><a class="btn" href="licenses.html"><span lang="ko">라이선스 상세·전문 보기</span><span lang="en">Full licence details and texts</span></a>
+     &nbsp; <a href="THIRD_PARTY_NOTICES.txt">THIRD_PARTY_NOTICES.txt</a> · <a data-link="license" href="#">LICENSE</a> · <a data-link="releases" href="#"><span lang="ko">소스 코드 (Releases)</span><span lang="en">Source code (Releases)</span></a></p>
+
+  <h3 style="margin-top:32px"><span lang="ko">소리·상표</span><span lang="en">Sounds and trademarks</span></h3>
+  <p style="font-size:14px"><span lang="ko">모든 소리는 원본 코드로 실시간 합성되며, 플러그인에는 녹음이나 샘플이 들어 있지 않습니다.</span><span lang="en">Every sound is synthesised in real time by original code; the plug-in contains no recordings or samples.</span></p>
+  <p style="font-size:13px;color:var(--silk-dim)"><span lang="ko">VST는 Steinberg Media Technologies GmbH의 등록 상표이고, Audio Units와 macOS는 Apple Inc.의 상표입니다. 이 이름들은 호환성 설명에만 쓰이며, SilkReed Sax는 이들 회사와 제휴하거나 보증받지 않은 독립 프로젝트입니다.</span><span lang="en">VST is a registered trademark of Steinberg Media Technologies GmbH; Audio Units and macOS are trademarks of Apple Inc. These names describe compatibility only; SilkReed Sax is an independent project, not affiliated with or endorsed by these companies.</span></p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 the SilkReed Sax contributors · AGPL-3.0-or-later</span>
+    <span><a data-link="source" href="#">GitHub</a> · <a data-link="releases" href="#">Releases</a> · <a href="licenses.html"><span lang="ko">라이선스</span><span lang="en">Licences</span></a> · <a data-link="issues" href="#"><span lang="ko">문제 신고</span><span lang="en">Report an issue</span></a></span>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
