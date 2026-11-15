@@ -10,8 +10,8 @@
 
 <p align="center">
   소프라노·알토·테너 색소폰만을 위해 만든 가상악기 · VST3 / AU / Standalone<br>
-  <a href="https://github.com/jayusop/SilkReed-Sax/releases/latest"><b>⬇ 최신 버전 다운로드</b></a> ·
-  <a href="https://jayusop.github.io/SilkReed-Sax/">소개 페이지</a>
+  <a href="https://github.com/jayusop/SilkReedSax/releases/latest"><b>⬇ 최신 버전 다운로드</b></a> ·
+  <a href="https://jayusop.github.io/SilkReedSax/">소개 페이지</a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
   <img alt="VST3 / AU / Standalone" src="https://img.shields.io/badge/VST3%20%2F%20AU%20%2F%20Standalone-supported-9a6a1e">
   <img alt="Apple Silicon / Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2F%20Intel-universal-2a3452">
   <img alt="라이선스 AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-3fb950">
-  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReed-Sax?color=fbe2a0">
+  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReedSax?color=fbe2a0">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## 설치
 
-1. [Releases](https://github.com/jayusop/SilkReed-Sax/releases/latest)에서 `SilkReed-Sax-<버전>-macOS.zip`을 내려받아 압축을 풉니다.
+1. [Releases](https://github.com/jayusop/SilkReedSax/releases/latest)에서 `SilkReed-Sax-<버전>-macOS.zip`을 내려받아 압축을 풉니다.
 2. 쓰는 DAW에 맞는 파일을 복사합니다 (Finder에서 <kbd>⌘⇧G</kbd>로 경로 열기).
 
    | 파일 | 복사할 위치 |
@@ -45,10 +45,11 @@
 
 3. Apple 공증을 받지 않은 개인 배포판이라 macOS가 "손상되었거나 확인할 수 없는 개발자" 경고를 띄울 수 있습니다. 터미널에서 해제하세요.
    ```bash
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
-xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
-```
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
+   xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
+   ```
+
 4. DAW를 다시 시작하거나 플러그인을 다시 스캔한 뒤 악기 트랙에 **SilkReed Sax**를 올립니다. Logic Pro: *Instrument › AU Instruments › SilkReed Audio › SilkReed Sax*
 
 ## 기능
@@ -73,10 +74,12 @@ Init (Default)
 
 ## 소스 코드와 빌드
 
-전체 소스 코드는 각 릴리스에 `SilkReed-Sax-<버전>-source.zip`으로 함께 올라갑니다. Xcode 커맨드라인 툴과 CMake 3.22 이상이 필요합니다.
+전체 소스 코드는 [SilkReedSax-Dev](https://github.com/jayusop/SilkReedSax-Dev) 저장소에 공개되어 있습니다. Xcode 커맨드라인 툴과 CMake 3.22 이상이 필요하며, JUCE 8.0.9는 처음 빌드할 때 자동으로 내려받습니다.
 
 ```bash
 brew install cmake
+git clone https://github.com/jayusop/SilkReedSax-Dev.git
+cd SilkReedSax-Dev
 ./build.sh universal   # Apple Silicon + Intel → build-universal/
 ./build.sh arm64       # Apple Silicon only
 ./build.sh x86_64      # Intel only
@@ -96,4 +99,4 @@ VST는 Steinberg Media Technologies GmbH의 등록 상표, Audio Units와 macOS�
 
 ## 문의
 
-- 버그 신고: [Issues](https://github.com/jayusop/SilkReed-Sax/issues) · 메일 jayusop@gmail.com
+- 버그 신고: [Issues](https://github.com/jayusop/SilkReedSax/issues) · 메일 jayusop@gmail.com

@@ -11,7 +11,7 @@ SilkReed Sax는 **GNU Affero 일반 공중 사용 허가서(AGPL) 버전 3 또�
 
 - **무료로 사용**: 개인·가정은 물론 회사·기관·학교 등 업무용·상업적 작업에 대수 제한 없이 쓸 수 있습니다.
 - **만든 음악은 여러분의 것**: 이 플러그인으로 연주·녹음·렌더링한 음악과 오디오에는 라이선스 의무가 따르지 않습니다. 상업 음반·영상·방송에도 자유롭게 쓰세요.
-- **소스 보기와 수정**: 각 릴리스에 첨부된 전체 소스 코드를 보고, 고치고, 직접 빌드할 수 있습니다.
+- **소스 보기와 수정**: [SilkReedSax-Dev](https://github.com/jayusop/SilkReedSax-Dev) 저장소에 공개된 전체 소스 코드를 보고, 고치고, 직접 빌드할 수 있습니다.
 - **재배포**: 원본이든 수정본이든 아래 조건을 지키면 다시 배포할 수 있습니다.
 
 ## 재배포·수정할 때 지킬 것
@@ -27,6 +27,6 @@ SilkReed Sax는 **GNU Affero 일반 공중 사용 허가서(AGPL) 버전 3 또�
 
 ## 제3자 구성 요소
 
-JUCE 8.0.9(AGPLv3)와 Steinberg VST3 SDK 3.7.12(GPLv3)를 오픈소스 라이선스로 사용하며, 두 라이선스는 결합이 허용됩니다(각 13조). 그 밖의 구성 요소는 허용형 라이선스입니다. 자세한 목록과 전문은 [docs/THIRD_PARTY_NOTICES.txt](docs/THIRD_PARTY_NOTICES.txt)와 [라이선스 페이지](https://jayusop.github.io/SilkReed-Sax/licenses.html)를 보세요.
+JUCE 8.0.9(AGPLv3)와 Steinberg VST3 SDK 3.7.12(GPLv3)를 오픈소스 라이선스로 사용하며, 두 라이선스는 결합이 허용됩니다(각 13조). 그 밖의 구성 요소는 허용형 라이선스입니다. 자세한 목록과 전문은 [docs/THIRD_PARTY_NOTICES.txt](docs/THIRD_PARTY_NOTICES.txt)와 [라이선스 페이지](https://jayusop.github.io/SilkReedSax/licenses.html)를 보세요.
 
 VST는 Steinberg Media Technologies GmbH의 등록 상표, Audio Units와 macOS는 Apple Inc.의 상표입니다.

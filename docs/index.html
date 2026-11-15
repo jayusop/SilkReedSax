@@ -26,7 +26,7 @@
       <a href="#usage"><span lang="ko">사용법</span><span lang="en">Usage</span></a>
       <a href="#build"><span lang="ko">빌드</span><span lang="en">Build</span></a>
       <a href="#faq">FAQ</a>
-      <a data-link="source" href="#">GitHub</a>
+      <a data-link="source" href="#"><span lang="ko">소스 코드</span><span lang="en">Source</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button data-set-lang="ko">KO</button><button data-set-lang="en">EN</button>
@@ -220,12 +220,12 @@ xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"</code></pre>
 <!-- ================= BUILD ================= -->
 <section id="build">
   <h2><span lang="ko">소스에서 빌드</span><span lang="en">Build from source</span></h2>
-  <p class="sub"><span lang="ko">전체 소스 코드는 각 릴리스에 <code>SilkReed-Sax-&lt;버전&gt;-source.zip</code>으로 함께 올라갑니다. Xcode 커맨드라인 툴과 CMake 3.22 이상이 필요하며, JUCE 8.0.9가 없으면 <code>build.sh</code>가 내려받습니다. Apple Silicon 전용, Intel 전용, 유니버설 중에서 골라 빌드할 수 있습니다.</span><span lang="en">The complete source code is attached to every release as <code>SilkReed-Sax-&lt;version&gt;-source.zip</code>. You need the Xcode command-line tools and CMake 3.22+; <code>build.sh</code> fetches JUCE 8.0.9 if it's missing. Build for Apple Silicon only, Intel only or universal.</span></p>
+  <p class="sub"><span lang="ko">전체 소스 코드는 <a data-link="source" href="#">SilkReedSax-Dev</a> 저장소에 공개되어 있습니다. Xcode 커맨드라인 툴과 CMake 3.22 이상이 필요하며, JUCE 8.0.9가 없으면 <code>build.sh</code>가 내려받습니다. Apple Silicon 전용, Intel 전용, 유니버설 중에서 골라 빌드할 수 있습니다.</span><span lang="en">The complete source code is public in the <a data-link="source" href="#">SilkReedSax-Dev</a> repository. You need the Xcode command-line tools and CMake 3.22+; <code>build.sh</code> fetches JUCE 8.0.9 if it's missing. Build for Apple Silicon only, Intel only or universal.</span></p>
 <pre><code><span class="c"># once</span>
 brew install cmake
 
-<span class="c"># unzip the source from the Releases page, then</span>
-cd SilkReed-Sax-source
+git clone <span data-text="clone">https://github.com/jayusop/SilkReedSax-Dev.git</span>
+cd <span data-text="repo-name">SilkReedSax-Dev</span>
 ./build.sh                 <span class="c"># this Mac's CPU</span>
 ./build.sh universal       <span class="c"># Apple Silicon + Intel in one   → build-universal/</span>
 ./build.sh arm64           <span class="c"># Apple Silicon only             → build-arm64/</span>
@@ -273,11 +273,11 @@ $T icon out/        <span class="c"># Icon.svg → PNG / iconset</span></code></
       <p><span lang="ko">플러그인으로 연주·렌더링한 오디오에는 라이선스 의무가 없습니다. 상업 음반·영상·방송에도 자유롭게 쓰세요.</span><span lang="en">Audio you play or render with it carries no licence obligations. Use it freely in commercial releases, video and broadcast.</span></p></div>
     <div class="card"><span class="ico">SHARING</span>
       <h3><span lang="ko">재배포·수정 조건</span><span lang="en">Redistributing or modifying</span></h3>
-      <p><span lang="ko">전체 소스는 각 릴리스에 함께 올라갑니다. 바이너리를 다시 배포하면 전체 소스와 라이선스 파일을 함께 제공해야 하고, 수정본은 AGPLv3를 유지하며 수정 사실을 밝혀야 합니다.</span><span lang="en">The full source ships with every release. Redistributing binaries means providing the full source and licence files; modified versions stay under the AGPLv3 and must say they were modified.</span></p></div>
+      <p><span lang="ko">전체 소스는 SilkReedSax-Dev 저장소에 공개되어 있습니다. 바이너리를 다시 배포하면 전체 소스와 라이선스 파일을 함께 제공해야 하고, 수정본은 AGPLv3를 유지하며 수정 사실을 밝혀야 합니다.</span><span lang="en">The full source is public in the SilkReedSax-Dev repository. Redistributing binaries means providing the full source and licence files; modified versions stay under the AGPLv3 and must say they were modified.</span></p></div>
   </div>
   <p style="margin-top:24px"><span lang="ko">JUCE 8.0.9(AGPLv3)와 Steinberg VST3 SDK 3.7.12(GPLv3)의 오픈소스 라이선스를 택해 무료로 공개합니다. 나머지 구성 요소는 모두 허용형 라이선스이며, 전체 고지문은 각 번들 안과 플러그인의 ABOUT 버튼에도 들어 있습니다.</span><span lang="en">Distributed free under the open-source options of JUCE 8.0.9 (AGPLv3) and the Steinberg VST3 SDK 3.7.12 (GPLv3). Every other component uses a permissive licence; the full notices are also inside every bundle and behind the plug-in's ABOUT button.</span></p>
   <p><a class="btn" href="licenses.html"><span lang="ko">라이선스 상세·전문 보기</span><span lang="en">Full licence details and texts</span></a>
-     &nbsp; <a href="THIRD_PARTY_NOTICES.txt">THIRD_PARTY_NOTICES.txt</a> · <a data-link="license" href="#">LICENSE</a> · <a data-link="releases" href="#"><span lang="ko">소스 코드 (Releases)</span><span lang="en">Source code (Releases)</span></a></p>
+     &nbsp; <a href="THIRD_PARTY_NOTICES.txt">THIRD_PARTY_NOTICES.txt</a> · <a data-link="license" href="#">LICENSE</a> · <a data-link="source" href="#"><span lang="ko">소스 코드 (SilkReedSax-Dev)</span><span lang="en">Source code (SilkReedSax-Dev)</span></a></p>
 
   <h3 style="margin-top:32px"><span lang="ko">소리·상표</span><span lang="en">Sounds and trademarks</span></h3>
   <p style="font-size:14px"><span lang="ko">모든 소리는 원본 코드로 실시간 합성되며, 플러그인에는 녹음이나 샘플이 들어 있지 않습니다.</span><span lang="en">Every sound is synthesised in real time by original code; the plug-in contains no recordings or samples.</span></p>
@@ -289,7 +289,7 @@ $T icon out/        <span class="c"># Icon.svg → PNG / iconset</span></code></
 <footer>
   <div class="wrap">
     <span>© 2026 the SilkReed Sax contributors · AGPL-3.0-or-later</span>
-    <span><a data-link="source" href="#">GitHub</a> · <a data-link="releases" href="#">Releases</a> · <a href="licenses.html"><span lang="ko">라이선스</span><span lang="en">Licences</span></a> · <a data-link="issues" href="#"><span lang="ko">문제 신고</span><span lang="en">Report an issue</span></a></span>
+    <span><a data-link="source" href="#"><span lang="ko">소스 코드</span><span lang="en">Source</span></a> · <a data-link="releases" href="#">Releases</a> · <a href="licenses.html"><span lang="ko">라이선스</span><span lang="en">Licences</span></a> · <a data-link="issues" href="#"><span lang="ko">문제 신고</span><span lang="en">Report an issue</span></a></span>
   </div>
 </footer>
 

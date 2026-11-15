@@ -10,8 +10,8 @@
 
 <p align="center">
   ソプラノ・アルト・テナーサックスのためだけに作られた仮想楽器 · VST3 / AU / Standalone<br>
-  <a href="https://github.com/jayusop/SilkReed-Sax/releases/latest"><b>⬇ 最新版をダウンロード</b></a> ·
-  <a href="https://jayusop.github.io/SilkReed-Sax/">紹介ページ</a>
+  <a href="https://github.com/jayusop/SilkReedSax/releases/latest"><b>⬇ 最新版をダウンロード</b></a> ·
+  <a href="https://jayusop.github.io/SilkReedSax/">紹介ページ</a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
   <img alt="VST3 / AU / Standalone" src="https://img.shields.io/badge/VST3%20%2F%20AU%20%2F%20Standalone-supported-9a6a1e">
   <img alt="Apple Silicon / Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2F%20Intel-universal-2a3452">
   <img alt="ライセンス AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-3fb950">
-  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReed-Sax?color=fbe2a0">
+  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReedSax?color=fbe2a0">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## インストール
 
-1. [Releases](https://github.com/jayusop/SilkReed-Sax/releases/latest) から `SilkReed-Sax-<バージョン>-macOS.zip` をダウンロードして展開します。
+1. [Releases](https://github.com/jayusop/SilkReedSax/releases/latest) から `SilkReed-Sax-<バージョン>-macOS.zip` をダウンロードして展開します。
 2. お使いの DAW に合ったファイルをコピーします（Finder で <kbd>⌘⇧G</kbd> を押すとパスを開けます）。
 
    | ファイル | コピー先 |
@@ -45,10 +45,11 @@
 
 3. Apple の公証を受けていない個人配布版のため、macOS が「壊れている」「開発元を確認できない」と表示することがあります。ターミナルで解除してください：
    ```bash
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
-xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
-```
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
+   xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
+   ```
+
 4. DAW を再起動するかプラグインを再スキャンし、インストゥルメントトラックに **SilkReed Sax** を読み込みます。Logic Pro：*Instrument › AU Instruments › SilkReed Audio › SilkReed Sax*
 
 ## 機能
@@ -73,10 +74,12 @@ Init (Default)
 
 ## ソースコードとビルド
 
-完全なソースコードは各リリースに `SilkReed-Sax-<バージョン>-source.zip` として添付されます。Xcode コマンドラインツールと CMake 3.22 以降が必要です。
+完全なソースコードは [SilkReedSax-Dev](https://github.com/jayusop/SilkReedSax-Dev) リポジトリで公開しています。Xcode コマンドラインツールと CMake 3.22 以降が必要で、JUCE 8.0.9 は初回ビルド時に自動でダウンロードされます。
 
 ```bash
 brew install cmake
+git clone https://github.com/jayusop/SilkReedSax-Dev.git
+cd SilkReedSax-Dev
 ./build.sh universal   # Apple Silicon + Intel → build-universal/
 ./build.sh arm64       # Apple Silicon only
 ./build.sh x86_64      # Intel only
@@ -96,4 +99,4 @@ VST は Steinberg Media Technologies GmbH の登録商標、Audio Units と macO
 
 ## お問い合わせ
 
-- 不具合報告：[Issues](https://github.com/jayusop/SilkReed-Sax/issues) · メール jayusop@gmail.com
+- 不具合報告：[Issues](https://github.com/jayusop/SilkReedSax/issues) · メール jayusop@gmail.com

@@ -10,8 +10,8 @@
 
 <p align="center">
   A virtual instrument built only for soprano, alto and tenor saxophone · VST3 / AU / Standalone<br>
-  <a href="https://github.com/jayusop/SilkReed-Sax/releases/latest"><b>⬇ Download the latest version</b></a> ·
-  <a href="https://jayusop.github.io/SilkReed-Sax/">Website</a>
+  <a href="https://github.com/jayusop/SilkReedSax/releases/latest"><b>⬇ Download the latest version</b></a> ·
+  <a href="https://jayusop.github.io/SilkReedSax/">Website</a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
   <img alt="VST3 / AU / Standalone" src="https://img.shields.io/badge/VST3%20%2F%20AU%20%2F%20Standalone-supported-9a6a1e">
   <img alt="Apple Silicon / Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2F%20Intel-universal-2a3452">
   <img alt="License AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-3fb950">
-  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReed-Sax?color=fbe2a0">
+  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReedSax?color=fbe2a0">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## Installation
 
-1. Download `SilkReed-Sax-<version>-macOS.zip` from [Releases](https://github.com/jayusop/SilkReed-Sax/releases/latest) and unzip it.
+1. Download `SilkReed-Sax-<version>-macOS.zip` from [Releases](https://github.com/jayusop/SilkReedSax/releases/latest) and unzip it.
 2. Copy the formats your DAW uses (in Finder, <kbd>⌘⇧G</kbd> opens a path).
 
    | File | Copy to |
@@ -45,10 +45,11 @@
 
 3. This is a personal build that isn't notarized by Apple, so macOS may say it is damaged or from an unidentified developer. Clear the flag in Terminal:
    ```bash
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
-xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
-```
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
+   xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
+   ```
+
 4. Restart or rescan your DAW and insert **SilkReed Sax** on an instrument track. Logic Pro: *Instrument › AU Instruments › SilkReed Audio › SilkReed Sax*
 
 ## Features
@@ -73,10 +74,12 @@ User presets are saved to `~/Music/SilkReed Sax/Presets/`.
 
 ## Source code and building
 
-The complete source code is attached to every release as `SilkReed-Sax-<version>-source.zip`. You need the Xcode command-line tools and CMake 3.22+.
+The complete source code is public in the [SilkReedSax-Dev](https://github.com/jayusop/SilkReedSax-Dev) repository. You need the Xcode command-line tools and CMake 3.22+; JUCE 8.0.9 is fetched automatically on the first build.
 
 ```bash
 brew install cmake
+git clone https://github.com/jayusop/SilkReedSax-Dev.git
+cd SilkReedSax-Dev
 ./build.sh universal   # Apple Silicon + Intel → build-universal/
 ./build.sh arm64       # Apple Silicon only
 ./build.sh x86_64      # Intel only
@@ -96,4 +99,4 @@ VST is a registered trademark of Steinberg Media Technologies GmbH; Audio Units 
 
 ## Contact
 
-- Bug reports: [Issues](https://github.com/jayusop/SilkReed-Sax/issues) · email jayusop@gmail.com
+- Bug reports: [Issues](https://github.com/jayusop/SilkReedSax/issues) · email jayusop@gmail.com

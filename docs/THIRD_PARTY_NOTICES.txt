@@ -19,7 +19,7 @@ JUCE Framework 8.0.9
 ==============================================================================
 Copyright (c) Raw Material Software Limited. https://juce.com
 Used under either the GNU Affero General Public License v3 (AGPLv3) or a commercial
-JUCE licence, as chosen by the distributor of this software (see README.md, 'Licensing').
+JUCE licence; SilkReed Sax uses it under the AGPLv3 (see LICENSE and README.md, 'Licensing').
 
 # The JUCE Framework
 

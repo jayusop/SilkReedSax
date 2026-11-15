@@ -10,8 +10,8 @@
 
 <p align="center">
   专为高音、中音、次中音萨克斯打造的虚拟乐器 · VST3 / AU / Standalone<br>
-  <a href="https://github.com/jayusop/SilkReed-Sax/releases/latest"><b>⬇ 下载最新版本</b></a> ·
-  <a href="https://jayusop.github.io/SilkReed-Sax/">介绍页面</a>
+  <a href="https://github.com/jayusop/SilkReedSax/releases/latest"><b>⬇ 下载最新版本</b></a> ·
+  <a href="https://jayusop.github.io/SilkReedSax/">介绍页面</a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
   <img alt="VST3 / AU / Standalone" src="https://img.shields.io/badge/VST3%20%2F%20AU%20%2F%20Standalone-supported-9a6a1e">
   <img alt="Apple Silicon / Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2F%20Intel-universal-2a3452">
   <img alt="许可证 AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-3fb950">
-  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReed-Sax?color=fbe2a0">
+  <img alt="Release" src="https://img.shields.io/github/v/release/jayusop/SilkReedSax?color=fbe2a0">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## 安装
 
-1. 从 [Releases](https://github.com/jayusop/SilkReed-Sax/releases/latest) 下载 `SilkReed-Sax-<版本>-macOS.zip` 并解压。
+1. 从 [Releases](https://github.com/jayusop/SilkReedSax/releases/latest) 下载 `SilkReed-Sax-<版本>-macOS.zip` 并解压。
 2. 复制你的 DAW 所需的格式（在访达中按 <kbd>⌘⇧G</kbd> 可前往路径）。
 
    | 文件 | 复制到 |
@@ -45,10 +45,11 @@
 
 3. 这是未经 Apple 公证的个人发布版本，macOS 可能提示"已损坏"或"无法验证开发者"。请在终端中解除隔离：
    ```bash
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
-xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
-```
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/"SilkReed Sax.vst3"
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/"SilkReed Sax.component"
+   xattr -dr com.apple.quarantine /Applications/"SilkReed Sax.app"
+   ```
+
 4. 重启 DAW 或重新扫描插件，然后在乐器轨道上加载 **SilkReed Sax**。Logic Pro：*Instrument › AU Instruments › SilkReed Audio › SilkReed Sax*
 
 ## 功能
@@ -73,10 +74,12 @@ Init (Default)
 
 ## 源代码与构建
 
-每个版本都会附带完整源代码 `SilkReed-Sax-<版本>-source.zip`。需要 Xcode 命令行工具和 CMake 3.22 或更高版本。
+完整源代码公开在 [SilkReedSax-Dev](https://github.com/jayusop/SilkReedSax-Dev) 仓库中。需要 Xcode 命令行工具和 CMake 3.22 或更高版本；首次构建时会自动下载 JUCE 8.0.9。
 
 ```bash
 brew install cmake
+git clone https://github.com/jayusop/SilkReedSax-Dev.git
+cd SilkReedSax-Dev
 ./build.sh universal   # Apple Silicon + Intel → build-universal/
 ./build.sh arm64       # Apple Silicon only
 ./build.sh x86_64      # Intel only
@@ -96,4 +99,4 @@ VST 是 Steinberg Media Technologies GmbH 的注册商标；Audio Units 和 macO
 
 ## 联系
 
-- 问题反馈：[Issues](https://github.com/jayusop/SilkReed-Sax/issues) · 邮件 jayusop@gmail.com
+- 问题反馈：[Issues](https://github.com/jayusop/SilkReedSax/issues) · 邮件 jayusop@gmail.com

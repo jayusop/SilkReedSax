@@ -1,17 +1,20 @@
 (function () {
   var cfg = window.SITE_CONFIG || {};
-  var repo = cfg.repo || "jayusop/SilkReed-Sax";
+  var repo = cfg.repo || "jayusop/SilkReedSax";
+  var srcRepo = cfg.sourceRepo || "jayusop/SilkReedSax-Dev";
+  var srcBase = "https://github.com/" + srcRepo;
   var base = "https://github.com/" + repo;
   var branch = cfg.branch || "main";
   var links = {
-    source:   base,
+    source:   srcBase,
+    site:     base,
     releases: base + "/releases",
     download: base + "/releases/latest",
     issues:   base + "/issues",
     license:  base + "/blob/" + branch + "/LICENSE",
     notices:  base + "/blob/" + branch + "/THIRD_PARTY_NOTICES.md"
   };
-  var texts = { source: base, clone: base + ".git", "repo-name": repo.split("/")[1] };
+  var texts = { source: srcBase, clone: srcBase + ".git", "repo-name": srcRepo.split("/")[1] };
 
   document.querySelectorAll("[data-link]").forEach(function (a) {
     var href = links[a.getAttribute("data-link")];
